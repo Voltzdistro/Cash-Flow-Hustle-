@@ -44,3 +44,25 @@ footer {
     width: 100%;
     bottom: 0;
 }
+img {
+  border-radius: 50%; /* This makes the image circular */
+  width: 150px; /* Adjust width to your preferred size */
+  height: 150px; /* Ensure height and width are the same for a perfect circle */
+  object-fit: cover; /* This ensures only the central part of the image is displayed */
+}/* Default light mode styles */
+body {
+  background-color: #ffffff; /* Light background */
+  color: #000000; /* Dark text for light theme */
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000; /* Dark background */
+    color: #ffffff; /* Light text for dark theme */
+  }
+
+  header {
+    color: #ffffff; /* Adjust other elements for dark theme as needed */
+  }
+}
