@@ -4,51 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Freedom Class</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: gold;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            margin: 5px;
+            border: 2px solid gold;
+            border-radius: 10px;
+        }
+        .logo {
+            margin-top: 20px;
+        }
+        .courses {
+            margin-top: 50px;
+        }
+        .courses a {
+            color: gold;
+            display: block;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: #111;
+            text-decoration: none;
+        }
+        .premium, .join-discord, .contact {
+            margin-top: 30px;
+        }
+        .premium a, .join-discord a {
+            color: white;
+            background-color: #ff8000;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Financial Freedom Class</h1>
-        <nav>
-            <ul>
-                <li><a href="#kdp">KDP</a></li>
-                <li><a href="#affiliate">Affiliate Marketing</a></li>
-                <li><a href="#investing">Stock Market Investing</a></li>
-                <li><a href="#dropshipping">Dropshipping</a></li>
-                <li><a href="#join">Join Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Logo and Heading -->
+    <div class="logo">
+        <img src="logo.png" alt="Financial Freedom Class Logo" width="200">
+    </div>
+    <h1>Financial Freedom Class</h1>
     
-    <main>
-        <section id="kdp">
-            <h2>Kindle Direct Publishing (KDP)</h2>
-            <p>Learn how to publish and market your own eBooks, turning your writing passion into profit.</p>
-        </section>
+    <!-- Course Links -->
+    <div class="courses">
+        <h2>Our Courses</h2>
+        <a href="https://payment-link.com/kdp">Kindle Direct Publishing</a>
+        <a href="https://payment-link.com/affiliate">Affiliate Marketing</a>
+        <a href="https://payment-link.com/stock">Stock Market Investing</a>
+        <a href="https://payment-link.com/dropshipping">Dropshipping</a>
+    </div>
 
-        <section id="affiliate">
-            <h2>Affiliate Marketing</h2>
-            <p>Discover the art of promoting products and earning commissions through effective online marketing strategies.</p>
-        </section>
+    <!-- Premium Package -->
+    <div class="premium">
+        <h2>Get All Courses</h2>
+        <a href="https://payment-link.com/premium">Sign up for Premium</a>
+    </div>
 
-        <section id="investing">
-            <h2>Stock Market Investing</h2>
-            <p>Gain insights into investing in stocks, understanding market trends, and building a robust investment portfolio.</p>
-        </section>
+    <!-- Join Discord -->
+    <div class="join-discord">
+        <h2>Join Our Discord</h2>
+        <a href="#" onclick="showPaymentModal()">Join Discord</a>
+    </div>
 
-        <section id="dropshipping">
-            <h2>Dropshipping</h2>
-            <p>Explore how to start an eCommerce business without the hassle of inventory management, leveraging suppliers for success.</p>
-        </section>
+    <!-- Contact Us -->
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:your-email@example.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" placeholder="Your Message" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
-        <section id="join">
-            <h2>Get Started</h2>
-            <p>Ready to take control of your financial future? Join our Discord community today and start your journey toward financial freedom!</p>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer>
-        <p>© 2024 Financial Freedom Class. All rights reserved.</p>
+        &copy; 2024 Financial Freedom Class | Designed by VoltzDistro
     </footer>
+
+    <!-- Payment Modal for Discord -->
+    <div id="paymentModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:#333; color:white; padding:20px; border-radius:10px;">
+        <h2>Please Complete Payment First</h2>
+        <p>You need to pay for at least one course to join our Discord.</p>
+        <a href="https://payment-link.com" style="color:white; text-decoration:underline;">Pay Now</a>
+        <br><br>
+        <button onclick="closePaymentModal()">Close</button>
+    </div>
+
+    <script>
+        function showPaymentModal() {
+            document.getElementById('paymentModal').style.display = 'block';
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
