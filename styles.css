@@ -58,9 +58,8 @@ footer {
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-}.logo-img {
+img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover;
 }
